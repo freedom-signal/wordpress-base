@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9abe674c37129bad910d409c5174b8ed",
+    "content-hash": "983f281b7a787506465d46136432375c",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1787,6 +1787,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.6.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
         },
         {
             "name": "wpackagist-theme/twentyfifteen",

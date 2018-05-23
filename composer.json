@@ -29,7 +29,8 @@
 		"wp-cli/wp-cli": "^1.1.0",
 		"wpackagist-theme/twentyfifteen": "*",
 		"dzuelke/twentyfifteen-child": "*",
-		"johnpbloch/wordpress": "^4.9"
+		"johnpbloch/wordpress": "^4.9",
+		"wpackagist-plugin/wordpress-importer": "^0.6.4"
 	},
 	"scripts": {
 		"wordpress-setup-core-install-prompt": "wp core install --prompt",
