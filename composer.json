@@ -23,13 +23,13 @@
 	},
 	"require": {
 		"ext-gd": "*",
-		"johnpbloch/wordpress": "^4.5",
 		"wpackagist-plugin/amazon-web-services": "^0.3.4",
 		"wpackagist-plugin/amazon-s3-and-cloudfront": "^0.9.11",
 		"wpackagist-plugin/sendgrid-email-delivery-simplified": "^1.7",
 		"wp-cli/wp-cli": "^1.1.0",
 		"wpackagist-theme/twentyfifteen": "*",
-		"dzuelke/twentyfifteen-child": "*"
+		"dzuelke/twentyfifteen-child": "*",
+		"johnpbloch/wordpress": "^4.9"
 	},
 	"scripts": {
 		"wordpress-setup-core-install-prompt": "wp core install --prompt",
