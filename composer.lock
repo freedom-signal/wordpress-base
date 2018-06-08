@@ -4,8 +4,47 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "983f281b7a787506465d46136432375c",
+    "content-hash": "a4118c6b44f713b838509be1a6670eb8",
     "packages": [
+        {
+            "name": "afragen/github-updater",
+            "version": "7.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afragen/github-updater.git",
+                "reference": "318f09f0a7e1a08774dafb46cf8289968bddaaba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afragen/github-updater/zipball/318f09f0a7e1a08774dafb46cf8289968bddaaba",
+                "reference": "318f09f0a7e1a08774dafb46cf8289968bddaaba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Fragen",
+                    "email": "andy@thefragens.com",
+                    "homepage": "https://thefragens.com",
+                    "role": "Developer"
+                }
+            ],
+            "keywords": [
+                "install",
+                "plugin",
+                "theme",
+                "updater",
+                "wordpress"
+            ],
+            "time": "2018-04-28T00:24:05+00:00"
+        },
         {
             "name": "composer/ca-bundle",
             "version": "1.0.6",
