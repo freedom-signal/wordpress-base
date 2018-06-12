@@ -35,7 +35,7 @@
 		"dzuelke/twentyfifteen-child": "*",
 		"johnpbloch/wordpress": "^4.9",
 		"wpackagist-plugin/wordpress-importer": "^0.6.4",
-		"afragen/github-updater": "^7.6",
+		"afragen/github-updater": "^7.6"
 	},
 	"scripts": {
 		"wordpress-setup-core-install-prompt": "wp core install --prompt",
