@@ -1,6 +1,7 @@
-# Twelve-Factor WordPress
+# The Seattle Against Slavery Website Base
 
-WordPress, the [Twelve-Factor](http://12factor.net/) way: fully managed using Composer and configured using environment variables.
+This website is built off of the WordPress 12-factor base: fully managed using Composer and configured using environment variables.
+The theme for this website lives at [seattleagainstslavery/seattleagainstslavery](https://github.com/seattleagainstslavery/seattleagainstslavery)
 
 ## General Concepts and Considerations
 
@@ -18,86 +19,12 @@ The assumption is that this installation runs behind a load balancer whose `X-Fo
 
 HTTPS is forced for Login and Admin functions. `WP_DEBUG` is on; errors do not get displayed, but should get logged to PHP's default error log, accessible e.g. using `heroku logs`.
 
-## Quick Deploy
+## Automatic Deploys
 
-If you have a [Heroku](http://heroku.com) account, you may simply use the following button to deploy this application:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-After the deploy, in [Heroku's Dashboard](https://dasboard.heroku.com) under "Settings" for your deployed application, **remove the `WORDPRESS_ADMIN_*` environment variables**.
-
-To set up WordPress' Cron Jobs using [Heroku Scheduler](https://elements.heroku.com/addons/scheduler), see further below.
-
-## Manual Deploy
-
-### Clone
-
-Clone this repo (we're naming the Git remote "`upstream`" since you'll likely want to have "`origin`" be your actual site - you can [sync](https://help.github.com/articles/syncing-a-fork) changes from this repository later):
-
-```
-$ git clone -o upstream https://github.com/dzuelke/wordpress-12factor
-$ cd wordpress-12factor
-```
-
-If you like, you can locally install dependencies with [Composer](https://getcomposer.org):
-
-```
-$ composer install
-```
-
-### Create Application and Add-Ons
-
-Create a new app and add add-ons for MySQL, S3 and E-Mail:
-
-```
-$ heroku create
-$ heroku addons:create jawsdb
-$ heroku addons:create bucketeer
-$ heroku addons:create sendgrid
-```
-
-### Set WordPress Keys and Salts
-
-This will use the WordPress secret keys service, parse out the values, and set them as [config vars](https://devcenter.heroku.com/articles/config-vars):
-
-```
-$ heroku config:set $(curl 'https://api.wordpress.org/secret-key/1.1/salt/' | sed -E -e "s/^define\('(.+)', *'(.+)'\);$/WORDPRESS_\1=\2/" -e 's/ //g')
-```
-
-You can also generate your own key and set all required variables yourself (see section further below).
-
-### Deploy
+This repository is connected to a Heroku pipeline. Any commits to the master branch will automatically deploy to the staging app in the pipeline. 
 
 ```
 $ git push heroku master
-```
-
-### Finalize Installation
-
-This will create tables and set up an admin user:
-
-```
-$ heroku run 'composer wordpress-setup-core-install -- --title="WordPress on Heroku" --admin_user=admin --admin_password=admin --admin_email=admin@example.com --url="http://example.herokuapp.com/"'
-```
-
-If you'd like to interactively provide info instead (use a format like "`http://example.herokuapp.com`" with your app name for the URL), you can run:
-
-```
-$ heroku run 'vendor/bin/wp core install --prompt'
-```
-
-Finally, the following command will configure and enable plugins and set a reasonable structure for Permalinks:
-
-```
-$ heroku run 'composer wordpress-setup-finalize'
-```
-
-### Visit Blog
-
-Navigate to the application's URL, or open your browser the lazy way:
-
-```
-$ heroku open
 ```
 
 ## Installing a new Plugin or Theme
@@ -119,12 +46,6 @@ $ heroku open
 
 1. Run `git add composer.json composer.lock` and `git commit`;
 1. `git push heroku master`
-
-### Activating a Plugin or Theme once
-
-Run `heroku run 'vendor/bin/wp plugin activate` or `vendor/bin/wp theme activate` and pass the name of the plugin or theme (e.g. `wp theme activate hueman`).
-
-However, if you're working on an actual project, you will also want to ensure that this step can be run as part of the installation - see the next section for info.
 
 ### Activating a Plugin or Theme, the repeatable way
 
@@ -169,6 +90,8 @@ The same technique can be used for plugins; simply adjust the directory name and
 Whenever you run `composer install` locally, the theme simply gets symlinked into the correct WordPress directory. That means any changes you make to the theme in the `themes/` directory will immediately be applied to your running site.
 
 ## Updating WordPress and Plugins
+
+In order to ensure that the app remains the same across all deployments, installing plugins through the admin panel is disabled intentionally. You must all all plugins and changes to the site to the code base here and have it redeployed.
 
 To update all dependencies:
 
