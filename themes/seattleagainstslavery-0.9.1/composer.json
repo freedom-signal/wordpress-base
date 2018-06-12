@@ -1,8 +1,0 @@
-{
-	"type": "wordpress-theme",
-	"name": "seattleagainstslavery/seattleagainstslavery",
-	"version": "0.9.1",
-	"require": {
-		"composer/installers": "~1.0"
-	}
-}
