@@ -1,0 +1,102 @@
+.gform_wrapper {
+  @include foundation-forms;
+  margin: map-get($grid-column-gutter, medium) 0;
+  form {
+
+    ul {
+      li {
+        &.gfield {
+          padding: 0 !important;
+          .gfield_label {
+            display: none;
+          }
+          .ginput_cardinfo_left {
+            width: 100%;
+            .ginput_card_expiration {
+              @include foundation-form-select;
+              background: transparent;
+              border: 0 solid $primary-color;
+              border-bottom-width: 2px;
+              color: $primary-color;
+              text-transform: uppercase;
+
+              &:focus {
+                box-shadow: none;
+                outline: 0;
+              }
+            }
+          }
+          .ginput_cardinfo_right {
+            @extend .ginput_cardinfo_left;
+
+            .ginput_card_security_code {
+              display: inline-block;
+            }
+          }
+          .ginput_complex {
+            width: 100% !important;
+
+            select {
+              width: calc(100% - 1px);
+            }
+          }
+          .ginput_container {
+            background: $light-gray;
+            margin-top: 0.25 * $global-padding !important;
+            padding: $button-padding;
+            input {
+              @include foundation-form-text;
+              background: transparent;
+              border-width: 0 0 2px 0;
+              color: $primary-color;
+
+              &:focus {
+                box-shadow: none;
+                outline: 0;
+              }
+
+              @include placeholder {
+                color: transparentize($primary-color, 0.25);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+              }
+            }
+
+            .name_first,
+            .name_last {
+              label {
+                display: none;
+              }
+            }
+            &.ginput_container_creditcard {
+              label {
+                color: transparentize($primary-color, 0.25);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+              }
+            }
+            &.ginput_container_name {
+              padding-right: 0 !important;
+            }
+          }
+
+          &.field_description_below {
+            .ginput_container {
+              input {
+                margin-bottom: 0.25 * $global-padding;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .gform_footer {
+      text-align: center;
+
+      .gform_button {
+        @extend .sas-donate-form--button;
+      }
+    }
+  }
+}

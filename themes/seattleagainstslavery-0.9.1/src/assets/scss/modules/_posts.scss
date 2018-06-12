@@ -1,0 +1,10 @@
+.post{
+  &-border {
+    @include xy-grid;
+    @include flex-align(center, middle);
+
+    hr {
+      @include xy-cell(10);
+    }
+  }
+}

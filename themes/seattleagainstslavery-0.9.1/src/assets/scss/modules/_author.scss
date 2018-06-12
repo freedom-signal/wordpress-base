@@ -1,0 +1,18 @@
+.author {
+  &--bio {
+    @include xy-grid;
+    @extend .align-center;
+
+    &--content {
+      @include xy-cell(12);
+
+      @include breakpoint(medium){
+        @include xy-cell(10);
+      }
+
+      h1 {
+        margin-bottom: 1.5 * $global-padding;
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4118c6b44f713b838509be1a6670eb8",
+    "content-hash": "dd7ac04c9ff6316114b7aaf50ee4df61",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -908,6 +908,20 @@
                 "sockets"
             ],
             "time": "2016-10-13T00:11:37+00:00"
+        },
+        {
+            "name": "seattleagainstslavery/seattleagainstslavery",
+            "version": "0.9.1",
+            "dist": {
+                "type": "path",
+                "url": "themes/seattleagainstslavery-0.9.1",
+                "reference": "0e04e419f6caa5df779ad83d510ccc27c4804da1",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme"
         },
         {
             "name": "seld/cli-prompt",

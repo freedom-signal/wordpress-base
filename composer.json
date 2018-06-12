@@ -31,7 +31,8 @@
 		"dzuelke/twentyfifteen-child": "*",
 		"johnpbloch/wordpress": "^4.9",
 		"wpackagist-plugin/wordpress-importer": "^0.6.4",
-		"afragen/github-updater": "^7.6"
+		"afragen/github-updater": "^7.6",
+		"seattleagainstslavery/seattleagainstslavery": "0.9.1"
 	},
 	"scripts": {
 		"wordpress-setup-core-install-prompt": "wp core install --prompt",
@@ -50,7 +51,7 @@
 			"@wordpress-setup-enable-plugins",
 			"@wordpress-setup-permalink-structure"
 		],
-		"wordpress-setup-demo-theme": "wp theme activate twentyfifteen-child",
+		"wordpress-setup-demo-theme": "wp theme activate seattleagainstslavery",
 		"wordpress-setup-welcome-post": [
 			"echo 'It works! Please see <a href=\"https://github.com/dzuelke/wordpress-12factor\">wordpress-12factor on GitHub</a> for info and post-install instructions.' | wp post update 1 - --post_title=\"Welcome to WordPress on Heroku\""
 		]
