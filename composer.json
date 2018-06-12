@@ -32,7 +32,7 @@
 		"johnpbloch/wordpress": "^4.9",
 		"wpackagist-plugin/wordpress-importer": "^0.6.4",
 		"afragen/github-updater": "^7.6",
-		"seattleagainstslavery/seattleagainstslavery": "0.9.1"
+		"seattleagainstslavery/seattleagainstslavery": "*"
 	},
 	"scripts": {
 		"wordpress-setup-core-install-prompt": "wp core install --prompt",
