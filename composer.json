@@ -30,6 +30,7 @@
 		"wpackagist-plugin/acf-gravityforms-add-on": "1.2.1",
 		"wpackagist-plugin/the-events-calendar": "4.6.18",
 		"wpackagist-plugin/intuitive-custom-post-order": "3.1.1",
+		"wpackagist-plugin/gravityformscli": "1.0",
 		"wp-cli/wp-cli": "^1.1.0",
 		"wpackagist-theme/twentyfifteen": "*",
 		"dzuelke/twentyfifteen-child": "*",
@@ -42,7 +43,9 @@
 		"wordpress-setup-core-install": "wp core install --skip-email",
 		"wordpress-setup-clear-home": "wp option delete home || true",
 		"wordpress-setup-configure-s3": "echo '{\"domain\":\"path\",\"copy-to-s3\":\"1\",\"serve-from-s3\":\"1\",\"ssl\":\"request\"}' | wp option add tantan_wordpress_s3 --format=json",
-		"wordpress-setup-enable-plugins": "wp plugin activate amazon-web-services amazon-s3-and-cloudfront sendgrid-email-delivery-simplified intuitive-custom-post-order add-to-any acf-gravityforms-add-on the-events-calendar",
+		"wordpress-setup-enable-plugins": "wp plugin activate amazon-web-services amazon-s3-and-cloudfront sendgrid-email-delivery-simplified intuitive-custom-post-order add-to-any acf-gravityforms-add-on the-events-calendar gravityformscli",
+		"wordpress-install-gravityforms": "wp gf install --key=xxxxxx --activate",
+		"wordpress-install-gravityforms-stripe": "wp gf install gravityformsstripe --key=xxxxxx --activate",
 		"wordpress-setup-permalink-structure": "wp rewrite structure '/%year%/%monthnum%/%day%/%postname%/' || true",
 		"wordpress-setup": [
 			"@wordpress-setup-core-install-prompt",
@@ -52,6 +55,8 @@
 			"@wordpress-setup-clear-home",
 			"@wordpress-setup-configure-s3",
 			"@wordpress-setup-enable-plugins",
+			"@wordpress-install-gravityforms",
+			"@wordpress-install-gravityforms-stripe",
 			"@wordpress-setup-permalink-structure"
 		],
 		"wordpress-setup-demo-theme": "wp theme activate twentyfifteen-child",
