@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acda4ce739419c2ca4114a7dcc4eb6a9",
+    "content-hash": "346032331128d296f2b93fecb2515e2b",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -3610,26 +3610,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/amazon-web-services/"
-        },
-        {
-            "name": "wpackagist-plugin/gravityformscli",
-            "version": "1.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/gravityformscli/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gravityformscli.zip?timestamp=1510077103",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/gravityformscli/"
         },
         {
             "name": "wpackagist-plugin/intuitive-custom-post-order",
