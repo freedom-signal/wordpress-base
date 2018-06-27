@@ -13,16 +13,16 @@
 			"url": "themes/*/"
 		},
 		{
-		"type": "package",
-		"package": {
-			"name": "gravityforms/gravityforms",
-			"version": "1.9.14.25",
-			"type": "wordpress-plugin",
-			"dist": {
-			"type": "zip",
-			"url": "http://s3.amazonaws.com/gravityforms/releases/gravityforms_1.9.14.25.zip?AWSAccessKeyId=1603BBK66770VCSCJSG2&Expires=1529117914&Signature=SrVJwFYX990TgrqS17vZiwkbNr8%3D"
+			"type": "package",
+			"package": {
+				"name": "gravityforms/gravityforms",
+				"version": "1.9.14.25",
+				"type": "wordpress-plugin",
+				"dist": {
+				"type": "zip",
+				"url": "https://s3.amazonaws.com/gravityforms/releases/gravityforms_1.9.14.25.zip?AWSAccessKeyId=1603BBK66770VCSCJSG2&Expires=1529117914&Signature=SrVJwFYX990TgrqS17vZiwkbNr8%3D"
+				}
 			}
-		}
 		}
 	],
 	"extra": {
@@ -41,7 +41,9 @@
 		"wpackagist-plugin/add-to-any": "1.7.26",
 		"wpackagist-plugin/acf-gravityforms-add-on": "1.2.1",
 		"wpackagist-plugin/the-events-calendar": "4.6.18",
+		"wpackagist-plugin/gravityformscli": "*",
 		"wpackagist-plugin/intuitive-custom-post-order": "3.1.1",
+		"gravityforms/gravityforms": "1.9.14.25",
 		"wp-cli/wp-cli": "^1.1.0",
 		"wpackagist-theme/twentyfifteen": "*",
 		"dzuelke/twentyfifteen-child": "*",
