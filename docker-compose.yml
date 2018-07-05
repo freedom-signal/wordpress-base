@@ -17,7 +17,8 @@ services:
       - "/app/wordpress"
       - "/app/.heroku"
       - "/app/.composer"
-    entrypoint: "bash ./entrypoint.sh"
+      - "/app/wp-content"
+    command: "bash docker/command.sh"
   db:
     image: "mysql:5"
     restart: "always"
