@@ -1,0 +1,21 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "80:8000"
+    depends_on:
+      - db
+    env_file: ".env"
+    environment:
+      JAWSDB_URL: "mysql://sas:security@db/sas-dev"
+      PORT: "8000"
+      LOCAL_DEV: 1
+  db:
+    image: "mysql:5"
+    restart: "always"
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: "sas-dev"
+      MYSQL_USER: "sas"
+      MYSQL_PASSWORD: "security"

@@ -30,8 +30,8 @@ define('SECURE_AUTH_SALT', getenv('WORDPRESS_SECURE_AUTH_SALT')?:'put your uniqu
 define('LOGGED_IN_SALT',   getenv('WORDPRESS_LOGGED_IN_SALT')  ?:'put your unique phrase here');
 define('NONCE_SALT',       getenv('WORDPRESS_NONCE_SALT')      ?:'put your unique phrase here');
 
-define('FORCE_SSL_ADMIN', true);
-define('FORCE_SSL_LOGIN', true);
+define('FORCE_SSL_ADMIN', getenv('LOCAL_DEV') ? false : true);
+define('FORCE_SSL_LOGIN', getenv('LOCAL_DEV') ? false : true);
 if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') $_SERVER['HTTPS'] = 'on';
 
 define('WP_DEBUG', true);

@@ -2,3 +2,4 @@
 /wordpress/
 /wp-content/
 nginx-wordpress.conf
+.env
