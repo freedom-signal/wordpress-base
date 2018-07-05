@@ -16,6 +16,7 @@ services:
       - "/app/vendor"
       - "/app/wordpress"
       - "/app/.heroku"
+      - "/app/.composer"
   db:
     image: "mysql:5"
     restart: "always"
