@@ -5,3 +5,4 @@ nginx-wordpress.conf
 .env
 .bash_history
 .composer
+*.sw*
