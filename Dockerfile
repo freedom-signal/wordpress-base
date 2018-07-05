@@ -5,7 +5,7 @@ RUN \
   mkdir -p /tmp/buildpack/php /tmp/build_cache /tmp/env && \
   git clone https://github.com/heroku/heroku-buildpack-php.git /tmp/buildpack/php && \
   STACK=heroku-16 /tmp/buildpack/php/bin/compile /app /tmp/build_cache /tmp/env && \
-  rm /tmp/buildpack/php /tmp/build_cache /tmp/env
+  rm -rf /tmp/buildpack/php /tmp/build_cache /tmp/env
 
 FROM heroku/heroku:16
 COPY --from=build /app /app
