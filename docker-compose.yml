@@ -5,12 +5,16 @@ services:
     ports:
       - "80:8000"
     depends_on:
-      - db
+      - "db"
     env_file: ".env"
     environment:
       JAWSDB_URL: "mysql://sas:security@db/sas-dev"
       PORT: "8000"
       LOCAL_DEV: 1
+    volumes:
+      - ".:/app"
+      - "/app/vendor"
+      - "/app/wordpress"
   db:
     image: "mysql:5"
     restart: "always"
