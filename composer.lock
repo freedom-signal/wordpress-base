@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af20adc209cf30e8efc95be014497371",
+    "content-hash": "951e84eac9f10364e7eaad378ae8347e",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -933,6 +933,31 @@
                 "issues": "https://github.com/seattleagainstslavery/gravityforms/issues"
             },
             "time": "2018-07-06T22:08:41+00:00"
+        },
+        {
+            "name": "seattleagainstslavery/gravityforms-cli",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:seattleagainstslavery/gravityforms-cli.git",
+                "reference": "18e2fc8ad7d58fbb27fbd4f869331dc6f0cba209"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/seattleagainstslavery/gravityforms-cli/zipball/18e2fc8ad7d58fbb27fbd4f869331dc6f0cba209",
+                "reference": "18e2fc8ad7d58fbb27fbd4f869331dc6f0cba209",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "description": "Gravity forms CLI",
+            "support": {
+                "source": "https://github.com/seattleagainstslavery/gravityforms-cli/tree/master",
+                "issues": "https://github.com/seattleagainstslavery/gravityforms-cli/issues"
+            },
+            "time": "2018-07-06T22:29:22+00:00"
         },
         {
             "name": "seattleagainstslavery/gravityforms-stripe",
@@ -3662,26 +3687,6 @@
             "homepage": "https://wordpress.org/plugins/amazon-web-services/"
         },
         {
-            "name": "wpackagist-plugin/gravityformscli",
-            "version": "1.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/gravityformscli/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gravityformscli.zip?timestamp=1510077103",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/gravityformscli/"
-        },
-        {
             "name": "wpackagist-plugin/intuitive-custom-post-order",
             "version": "3.1.1",
             "source": {
@@ -3826,13 +3831,34 @@
                 "php"
             ],
             "time": "2018-05-24T20:47:48+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/gravityformscli",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/gravityformscli/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/gravityformscli.zip?timestamp=1510077103",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/gravityformscli/"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "seattleagainstslavery/gravityforms-stripe": 20,
-        "seattleagainstslavery/gravityforms": 20
+        "seattleagainstslavery/gravityforms": 20,
+        "seattleagainstslavery/gravityforms-cli": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
