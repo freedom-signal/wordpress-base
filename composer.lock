@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "346032331128d296f2b93fecb2515e2b",
+    "content-hash": "af20adc209cf30e8efc95be014497371",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -908,6 +908,56 @@
                 "sockets"
             ],
             "time": "2016-10-13T00:11:37+00:00"
+        },
+        {
+            "name": "seattleagainstslavery/gravityforms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:seattleagainstslavery/gravityforms.git",
+                "reference": "1dfa19df804b72f93bdc7110bb15c35a6666f9f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/seattleagainstslavery/gravityforms/zipball/1dfa19df804b72f93bdc7110bb15c35a6666f9f0",
+                "reference": "1dfa19df804b72f93bdc7110bb15c35a6666f9f0",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "description": "Gravity forms",
+            "support": {
+                "source": "https://github.com/seattleagainstslavery/gravityforms/tree/master",
+                "issues": "https://github.com/seattleagainstslavery/gravityforms/issues"
+            },
+            "time": "2018-07-06T22:08:41+00:00"
+        },
+        {
+            "name": "seattleagainstslavery/gravityforms-stripe",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:seattleagainstslavery/gravityforms-stripe.git",
+                "reference": "3444e1e48512a47ddab5ac864c6027939dfe49e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/seattleagainstslavery/gravityforms-stripe/zipball/3444e1e48512a47ddab5ac864c6027939dfe49e7",
+                "reference": "3444e1e48512a47ddab5ac864c6027939dfe49e7",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "description": "Gravity forms stripe",
+            "support": {
+                "source": "https://github.com/seattleagainstslavery/gravityforms-stripe/tree/master",
+                "issues": "https://github.com/seattleagainstslavery/gravityforms-stripe/issues"
+            },
+            "time": "2018-07-06T22:08:24+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -3612,6 +3662,26 @@
             "homepage": "https://wordpress.org/plugins/amazon-web-services/"
         },
         {
+            "name": "wpackagist-plugin/gravityformscli",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/gravityformscli/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/gravityformscli.zip?timestamp=1510077103",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/gravityformscli/"
+        },
+        {
             "name": "wpackagist-plugin/intuitive-custom-post-order",
             "version": "3.1.1",
             "source": {
@@ -3760,7 +3830,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "seattleagainstslavery/gravityforms-stripe": 20,
+        "seattleagainstslavery/gravityforms": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

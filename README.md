@@ -133,7 +133,7 @@ Instead of having WordPress check on each page load if Cron Jobs need to be run 
 
 ### Database Connection
 
-`DATABASE_URL` or `JAWSDB_URL` or `CLEARDB_DATABASE_URL` (format `mysql://user:pass@host:port/dbname`) for database connections.
+`JAWSDB_URL` or `CLEARDB_DATABASE_URL` (format `mysql://user:pass@host:port/dbname`) for database connections.
 
 ### AWS/S3
 
