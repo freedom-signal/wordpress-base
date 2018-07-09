@@ -49,21 +49,21 @@
     "wpackagist-plugin/the-events-calendar": "^4.6.18",
     "wpackagist-plugin/intuitive-custom-post-order": "^3.1.1",
     "wpackagist-plugin/wordpress-importer": "^0.6.4",
+    "wpackagist-plugin/advanced-custom-fields": "^5.6.9",
     "wp-cli/wp-cli": "^1.1.0",
     "wpackagist-theme/twentyfifteen": "^2.0",
     "dzuelke/twentyfifteen-child": "*",
     "johnpbloch/wordpress": "^4.9",
     "afragen/github-updater": "^7.6",
     "seattleagainstslavery/gravityforms-stripe": "dev-master",
-    "seattleagainstslavery/gravityforms": "dev-master",
-    "seattleagainstslavery/gravityforms-cli": "dev-master"
+    "seattleagainstslavery/gravityforms": "dev-master"
   },
   "scripts": {
     "wordpress-setup-core-install-prompt": "wp core install --prompt",
     "wordpress-setup-core-install": "wp core install --skip-email",
     "wordpress-setup-clear-home": "wp option delete home || true",
     "wordpress-setup-configure-s3": "echo '{\"domain\":\"path\",\"copy-to-s3\":\"1\",\"serve-from-s3\":\"1\",\"ssl\":\"request\"}' | wp option add tantan_wordpress_s3 --format=json",
-    "wordpress-setup-enable-plugins": "wp plugin activate amazon-web-services amazon-s3-and-cloudfront sendgrid-email-delivery-simplified intuitive-custom-post-order add-to-any acf-gravityforms-add-on the-events-calendar gravityformscli github-updater gravityforms gravityforms-stripe wordpress-importer",
+    "wordpress-setup-enable-plugins": "wp plugin activate amazon-web-services amazon-s3-and-cloudfront sendgrid-email-delivery-simplified intuitive-custom-post-order add-to-any acf-gravityforms-add-on the-events-calendar github-updater gravityforms gravityforms-stripe wordpress-importer advanced-custom-fields",
     "wordpress-setup-permalink-structure": "wp rewrite structure '/%year%/%monthnum%/%day%/%postname%/' || true",
     "wordpress-setup": [
       "@wordpress-setup-core-install-prompt",
