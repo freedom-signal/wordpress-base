@@ -89,12 +89,27 @@ with a personal access token from Github. Generate a [personal access token here
 
 To exactly replicate the environment and build of the heroku deploy, we use docker to manage our local dev environment. Download Docker Community Edition for your machine on the [Docker website](https://store.docker.com/search?type=edition&offering=community). 
 
-Docker uses the `docker-compose.yml` file and the `Dockerfile` to create an environment based off the heroku environment & php buildpacks. When you set up docker locally, it will build the exact same app in the exact same enviroment as the deploy to Heroku.
+Our docker uses the `docker-compose.yml` file and the `Dockerfile` to create an environment based off the heroku environment & php buildpacks. When you set up docker locally, it will build the exact same app in the exact same enviroment as the deploy to Heroku.
 
-To get started, run: `docker-compose build` to build the service. If you change the Dockerfile, run `docker-compose build` to rebuild it.
+To get started, run: 
 
-Then run: `docker-compose up`, which will builds, (re)create, start, and attache to service's container. You can now access the app by going to `localhost` in your browser.
+```bash
+docker-compose build
+```
+to build the wordpress app image and create the services "wordpress" & "db". If you change the Dockerfile or `docker-compose.yml`, run `docker-compose build` to rebuild it.
 
-To stop your container, run `docker-compose down`.
+Then run:
+
+```bash
+docker-compose up
+```
+
+which will start containers for the `wordpress` & `db` services. You can now access the app by going to `localhost` in your browser.
+
+To stop your container, run 
+
+```bash
+docker-compose down
+```
 
 The file `docker/command.sh` is run to install wordpress and run the composer scripts inside your docker container. Check out that file to see the way the wordpress installation is being run (including the local admin username/password) as well as when the composer scripts get called.
