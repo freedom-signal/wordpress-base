@@ -71,19 +71,8 @@ $ git push origin master
 ## `.env` file
 
 We keep environment variables in a `.env` file for local development. Environment variables are configured in Heroku, but you'll need to set up a `.env` fole locally. See the `.env.sample` for the structure of this file. You will need to create a copy of this file, naming it `.env`, and replacing the values with the proper keys. Do no check in your `.env` file--we intentionally keep this separate from the repo to maintain our secret keys.
-Please request a copy of the environment variables to 
+Please request a copy of the environment variables from liz@seattleagainstslavery.org.
 
-## `auth.json` file
-
-The `auth.json` file is used by composer to authenticate when needed for installing packages. Because we pull from private repositories, you'll need to repalce the following entry:
-
-```
-  "github-oauth": {
-      "github.com": "REPLACEME"
-    }
-```
-
-with a personal access token from Github. Generate a [personal access token here](https://github.com/settings/tokens). Ensure that your token has permissions set so that it can access the repositories needed (ie, give access with the token to any theme or plugin repositories that are private).
 
 # Running locally with Docker
 
