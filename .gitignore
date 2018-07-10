@@ -6,4 +6,3 @@ nginx-wordpress.conf
 .bash_history
 .composer
 *.sw*
-auth.json

@@ -1,6 +1,0 @@
-{
-  "http-basic": {},
-  "github-oauth": {
-      "github.com": "REPLACEME"
-    }
-}
