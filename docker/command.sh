@@ -11,7 +11,7 @@ composer wordpress-setup-core-install -- \
   --admin_user=admin \
   --admin_password=admin \
   --admin_email=admin@example.com \
-  --url="http://example.herokuapp.com/"
+  --url="http://localhost/"
 
 composer wordpress-setup-finalize
 
