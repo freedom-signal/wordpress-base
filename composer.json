@@ -78,10 +78,6 @@
       "@wordpress-setup-permalink-structure",
       "@wordpress-install-remote-theme",
       "@wordpress-activate-theme"
-    ],
-    "wordpress-setup-demo-theme": "wp theme activate twentyfifteen-child",
-    "wordpress-setup-welcome-post": [
-      "echo 'It works! Please see <a href=\"https://github.com/dzuelke/wordpress-12factor\">wordpress-12factor on GitHub</a> for info and post-install instructions.' | wp post update 1 - --post_title=\"Welcome to WordPress on Heroku\""
     ]
   },
   "require-dev": {
