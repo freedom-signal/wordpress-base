@@ -25,6 +25,14 @@ This repository is connected to a Heroku pipeline. Any commits to the master bra
 $ git push origin master
 ```
 
+### Quick deploy another instance of this app
+
+If you have a [Heroku](http://heroku.com) account, you may simply use the following button to deploy this application:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+After the deploy, in [Heroku's Dashboard](https://dasboard.heroku.com) under "Settings" for your deployed application, **remove the `WORDPRESS_ADMIN_*` environment variables**.
+
 
 ## Installing a new Plugin or Theme
 
