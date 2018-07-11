@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0e6947e6fd8f838fd1e832f03be7c04",
+    "content-hash": "547e6cbd834e3fcd1715ca8fd4e7caaa",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -933,31 +933,6 @@
                 "issues": "https://github.com/seattleagainstslavery/gravityforms/issues"
             },
             "time": "2018-07-06T22:08:41+00:00"
-        },
-        {
-            "name": "seattleagainstslavery/gravityforms-cli",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:seattleagainstslavery/gravityforms-cli.git",
-                "reference": "18e2fc8ad7d58fbb27fbd4f869331dc6f0cba209"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/seattleagainstslavery/gravityforms-cli/zipball/18e2fc8ad7d58fbb27fbd4f869331dc6f0cba209",
-                "reference": "18e2fc8ad7d58fbb27fbd4f869331dc6f0cba209",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.0"
-            },
-            "type": "wordpress-plugin",
-            "description": "Gravity forms CLI",
-            "support": {
-                "source": "https://github.com/seattleagainstslavery/gravityforms-cli/tree/master",
-                "issues": "https://github.com/seattleagainstslavery/gravityforms-cli/issues"
-            },
-            "time": "2018-07-06T22:29:22+00:00"
         },
         {
             "name": "seattleagainstslavery/gravityforms-stripe",
@@ -3877,8 +3852,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "seattleagainstslavery/gravityforms-stripe": 20,
-        "seattleagainstslavery/gravityforms": 20,
-        "seattleagainstslavery/gravityforms-cli": 20
+        "seattleagainstslavery/gravityforms": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
