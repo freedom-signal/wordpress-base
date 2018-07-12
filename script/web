@@ -2,6 +2,6 @@
 
 set -e
 
-cd "$BASH_SOURCE/.."
+cd "$(dirname ${BASH_SOURCE[0]})/.."
 
 vendor/bin/heroku-php-apache2 -C apache2-wordpress.conf wordpress/

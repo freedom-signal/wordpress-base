@@ -3,7 +3,7 @@
 set -e
 set -x
 
-cd "$BASH_SOURCE/.."
+cd "$(dirname ${BASH_SOURCE[0]})/.."
 
 composer wordpress-setup-core-install -- \
   --title='Seattle Against Slavery' \
