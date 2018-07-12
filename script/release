@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -e
-set -x
-
-cd "$(dirname ${BASH_SOURCE[0]})/.."
-
-composer wordpress-install-remote-theme
-composer wordpress-activate-theme

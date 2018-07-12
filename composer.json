@@ -59,6 +59,7 @@
     "seattleagainstslavery/gravityforms": "dev-master"
   },
   "scripts": {
+    "post-install-cmd": "composer wordpress-install-remote-theme && composer wordpress-activate-theme",
     "wordpress-setup-core-install-prompt": "wp core install --prompt",
     "wordpress-setup-core-install": "wp core install --skip-email",
     "wordpress-setup-clear-home": "wp option delete home || true",
