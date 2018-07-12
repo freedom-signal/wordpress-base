@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+cd "$BASH_SOURCE/.."
+
+vendor/bin/heroku-php-apache2 -C apache2-wordpress.conf wordpress/
