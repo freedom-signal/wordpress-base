@@ -53,5 +53,10 @@
       "description": "security token generated for WordPress"
     }
   },
-  "addons": ["jawsdb", "bucketeer", "sendgrid"]
+  "addons": ["jawsdb", "bucketeer", "sendgrid"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ]
 }
