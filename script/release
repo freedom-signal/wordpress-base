@@ -5,11 +5,5 @@ set -x
 
 cd "$(dirname ${BASH_SOURCE[0]})/.."
 
-composer wordpress-setup-core-install -- \
-  --title='Seattle Against Slavery' \
-  --admin_user="$WORDPRESS_ADMIN_USER" \
-  --admin_password="$WORDPRESS_ADMIN_PASSWORD" \
-  --admin_email="$WORDPRESS_ADMIN_EMAIL" \
-  --url="http://$HEROKU_APP_NAME.herokuapp.com/" || true
-
-composer wordpress-setup-finalize || true
+composer wordpress-install-remote-theme
+composer wordpress-activate-theme

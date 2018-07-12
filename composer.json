@@ -65,7 +65,7 @@
     "wordpress-setup-configure-s3": "echo '{\"domain\":\"path\",\"copy-to-s3\":\"1\",\"serve-from-s3\":\"1\",\"ssl\":\"request\"}' | wp option add tantan_wordpress_s3 --format=json",
     "wordpress-setup-enable-plugins": "wp plugin activate amazon-web-services amazon-s3-and-cloudfront sendgrid-email-delivery-simplified intuitive-custom-post-order add-to-any acf-gravityforms-add-on the-events-calendar github-updater gravityforms gravityforms-stripe wordpress-importer advanced-custom-fields",
     "wordpress-setup-permalink-structure": "wp rewrite structure '/%year%/%monthnum%/%day%/%postname%/' || true",
-    "wordpress-install-remote-theme": "wp theme install-git https://github.com/seattleagainstslavery/seattleagainstslavery --branch=build",
+    "wordpress-install-remote-theme": "wp theme install --force https://github.com/seattleagainstslavery/seattleagainstslavery/archive/build.zip",
     "wordpress-activate-theme": "wp theme activate seattleagainstslavery",
     "wordpress-setup": [
       "@wordpress-setup-core-install-prompt",
