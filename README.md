@@ -28,10 +28,6 @@ After the deploy, in [Heroku's Dashboard](https://dasboard.heroku.com) under "Se
 
 This repository is connected to a Heroku pipeline. Any commits to the master branch on GitHub will automatically deploy to the staging app in the pipeline.
 
-```
-$ git push origin master
-```
-
 ## Managing plugins and themes
 
 All plugins and themes are managed in the `composer.json` file. There are three steps to add a new plugin:
