@@ -36,7 +36,7 @@ $ git push origin master
 
 All plugins and themes are managed in the `composer.json` file. There are three steps to add a new plugin:
 
-1. **Ensure that the source of the plugin is listed under `"repositories".** Note that in the list of repositories, you have many source types. `wpackagist`, the `plugins` & 'themes' directories, or as an example, a private repository with the git url. If you are using a private respository, add a new entry in the list of repositories so that composer will know where to find the source.
+1. **Ensure that the source of the plugin is listed under `"repositories".`** Note that in the list of repositories, you have many source types. `wpackagist`, the `plugins` & `themes` directories, or as an example, a private repository with the git url. If you are using a private respository, add a new entry in the list of repositories so that composer will know where to find the source.
 2. Add your plugin or theme to the `"require"` list. Use version numbers to lock to a specific version or list a minimum version.
 3. Use the `"scripts"` section to peform actions with the wp-cli. For example, if you are adding a plugin, make sure to add it to the script named `wordpress-setup-enable-plugins`. If you are adding a new theme, you can have the script `wordpress-activate-theme` set to activate the new theme.
 
@@ -69,7 +69,7 @@ $ git push origin master
 
 ## `.env` file
 
-We keep environment variables in a `.env` file for local development. Environment variables are configured in Heroku, but you'll need to set up a `.env` file locally. See the `.env.sample` for the structure of this file. You will need to create a copy of this file, naming it `.env`, and replacing the values with the proper keys. Do no check in your `.env` file--we intentionally keep this separate from the repo to maintain our secret keys.
+We keep environment variables in a `.env` file for local development. Environment variables are configured in Heroku, but you'll need to set up a `.env` file locally. See the `.env.sample` for the structure of this file. You will need to create a copy of this file, naming it `.env`, and replacing the values with the proper keys. Do not check in your `.env` file--we intentionally keep this separate from the repo to maintain our secret keys.
 
 Note that if you are pulling any themes or plugins from a private repository on Github, you will need to set up `github-oauth` as listed in the `.env.sample` file so that you can access the repos. You can find out how to make a token for access [here](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/).
 
