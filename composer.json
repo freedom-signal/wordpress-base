@@ -13,17 +13,9 @@
       "url": "themes/*/"
     },
     {
-        "type": "vcs",
-        "url": "git@github.com:seattleagainstslavery/gravityforms.git"
-    },
-    {
-        "type": "vcs",
-        "url": "git@github.com:seattleagainstslavery/gravityforms-stripe.git"
-    },
-    {
       "type": "vcs",
-      "url": "git@github.com:seattleagainstslavery/gravityforms-cli.git"
-  }
+      "url": "git@github.com:seattleagainstslavery/gravityforms.git"
+    }
   ],
   "extra": {
     "wordpress-install-dir": "wordpress",
@@ -44,18 +36,10 @@
     "wpackagist-plugin/amazon-web-services": "^0.3.4",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "^0.9.11",
     "wpackagist-plugin/sendgrid-email-delivery-simplified": "^1.7",
-    "wpackagist-plugin/add-to-any": "^1.7.26",
-    "wpackagist-plugin/acf-gravityforms-add-on": "^1.2.1",
-    "wpackagist-plugin/the-events-calendar": "^4.6.18",
-    "wpackagist-plugin/intuitive-custom-post-order": "^3.1.1",
-    "wpackagist-plugin/wordpress-importer": "^0.6.4",
-    "wpackagist-plugin/advanced-custom-fields": "^5.6.9",
     "wp-cli/wp-cli": "^1.1.0",
+    "johnpbloch/wordpress": "^4.9",
     "wpackagist-theme/twentyfifteen": "^2.0",
     "dzuelke/twentyfifteen-child": "*",
-    "johnpbloch/wordpress": "^4.9",
-    "afragen/github-updater": "^7.6",
-    "seattleagainstslavery/gravityforms-stripe": "dev-master",
     "seattleagainstslavery/gravityforms": "dev-master"
   },
   "scripts": {
@@ -64,10 +48,9 @@
     "wordpress-setup-core-install": "wp core install --skip-email",
     "wordpress-setup-clear-home": "wp option delete home || true",
     "wordpress-setup-configure-s3": "echo '{\"domain\":\"path\",\"copy-to-s3\":\"1\",\"serve-from-s3\":\"1\",\"ssl\":\"request\"}' | wp option add tantan_wordpress_s3 --format=json",
-    "wordpress-setup-enable-plugins": "wp plugin activate amazon-web-services amazon-s3-and-cloudfront sendgrid-email-delivery-simplified intuitive-custom-post-order add-to-any acf-gravityforms-add-on the-events-calendar github-updater gravityforms gravityforms-stripe wordpress-importer advanced-custom-fields",
+    "wordpress-setup-enable-plugins": "wp plugin activate amazon-web-services amazon-s3-and-cloudfront sendgrid-email-delivery-simplified gravityforms",
     "wordpress-setup-permalink-structure": "wp rewrite structure '/%year%/%monthnum%/%day%/%postname%/' || true",
-    "wordpress-install-remote-theme": "wp theme install --force https://github.com/seattleagainstslavery/seattleagainstslavery/archive/build.zip",
-    "wordpress-activate-theme": "wp theme activate seattleagainstslavery",
+    "wordpress-activate-theme": "wp theme activate twentyfifteen-child",
     "wordpress-setup": [
       "@wordpress-setup-core-install-prompt",
       "@wordpress-setup-finalize"
@@ -77,7 +60,6 @@
       "@wordpress-setup-configure-s3",
       "@wordpress-setup-enable-plugins",
       "@wordpress-setup-permalink-structure",
-      "@wordpress-install-remote-theme",
       "@wordpress-activate-theme"
     ]
   },
