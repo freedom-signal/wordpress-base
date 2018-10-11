@@ -18,11 +18,13 @@ HTTPS is forced for Login and Admin functions, except for local development. `WP
 
 ## Create a new WordPress app with quick deploy
 
-Fork this repository and give it the name of the site you are creating. Then simply use the following button to deploy this application to Heroku:
+Fork this repository and give it the name of the site you are creating. update teh `app.json` file to have the correct name & URL for the wordpress intallation, then commit & push your changes to the repository.
+
+Next, simply use the following button to deploy this application to Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-After the deploy, in [Heroku's Dashboard](https://dasboard.heroku.com) under "Settings" for your deployed application, **remove the `WORDPRESS_ADMIN_*` environment variables**. You may then remove this section from the README.
+After the deploy, in [Heroku's Dashboard](https://dasboard.heroku.com) under "Settings" for your deployed application, **remove the `WORDPRESS_ADMIN_*` environment variables**. Copy all other generated ENV variables to your local `.env` file. You may then remove this section from the README.
 
 ## Automatic Deploys
 
